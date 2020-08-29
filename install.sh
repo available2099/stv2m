@@ -265,6 +265,8 @@ install_master(){
           pip install --no-cache-dir -r requirements.txt
           chmod +x /var/local/v2master/startv2m.sh
           cp -f startv2m.service /etc/systemd/system/
+          cp bin/geoip.dat /usr/local/bin/
+          cp bin/geosite.dat /usr/local/bin/
           systemctl daemon-reload
           systemctl enable startv2m
           systemctl start startv2m
@@ -292,6 +294,8 @@ elif [[ x"${release}" == x"ubuntu" ]]; then
       pip install --no-cache-dir -r requirements.txt
       chmod +x /var/local/v2master/startv2m.sh
       cp -f startv2m.service /etc/systemd/system/
+      cp bin/geoip.dat /usr/local/bin/
+      cp bin/geosite.dat /usr/local/bin/
         systemctl daemon-reload
         systemctl enable startv2m
         systemctl start startv2m
@@ -319,6 +323,8 @@ elif [[ x"${release}" == x"debian" ]]; then
     pip install --no-cache-dir -r requirements.txt
     chmod +x /var/local/v2master/startv2m.sh
     cp -f startv2m.service /etc/systemd/system/
+    cp bin/geoip.dat /usr/local/bin/
+      cp bin/geosite.dat /usr/local/bin/
       systemctl daemon-reload
       systemctl enable startv2m
       systemctl start startv2m
