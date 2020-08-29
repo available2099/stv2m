@@ -138,7 +138,7 @@ def reset_config():
 
 def init_db(update=False):
     add_if_not_exist(Setting('address', 'address', '', 'text', '', True), update)
-    add_if_not_exist(Setting('port', 'port', '65432', 'int', '', True), update)
+    add_if_not_exist(Setting('port', 'port', '8085', 'int', '', True), update)
     add_if_not_exist(Setting('base_path', 'base_path', '', 'text', '', True), update)
     add_if_not_exist(Setting('cert_file', 'cert_file', '', 'text', '', True), update)
     add_if_not_exist(Setting('key_file', 'key_file', '', 'text', '', True), update)
